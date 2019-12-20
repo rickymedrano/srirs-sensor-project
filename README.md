@@ -8,6 +8,8 @@ Ricky Medrano and Geraldine Salazar-Harms
 - Python 3 with mysql connector library
 - Arduino IDE with EmonLib library
 - Raspbian (any version with systemd, so Stretch or Buster)
+- MySQL database, either locally or in the cloud. We used a MySQL RDS on AWS with their free-tier option. 
+- If you want to graph the data you can use a website like Grafana and connect your database, or you can use Plotly.
 
 ### Hardware Prerequisites
 You will need a 3D Printer if you want to print the model.
@@ -30,3 +32,8 @@ Here is a list of materials used in the project:
 * Electrical
   * This project involves working with mains power and is therefore very dangerous. If you feel even slightly uncomfortable interacting with your breaker box, get the help of an Electrician to hook up the CT sensors. 
   * This project required two CT sensors since there were two main hot lines at the research station but most likely you'll only need 1 CT sensor if you're trying to implement this in a house.
+ * Water
+  * Installin the flowmeter will probably require the help of a Plumber. It requires you shutting off the water main line and then installing the flowmeter inline which involves cutting pipe and testing for leaks. 
+* Create a free-tier AWS account and create a MySQL database https://aws.amazon.com/rds/free/
+
+
