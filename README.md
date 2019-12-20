@@ -65,6 +65,12 @@ I've included all the .stl files if you want to print the fox.
 Once all is printed, screw the bracket onto the base. Hollow out the hole on the body where the power and sensor wires come in. Use super glue to attach the head to the body. 
 
 ### Hardware Setup
+* Water
+ * Once you've installed your flowmeter, you'll need to hook it up to the Arduino Nano. There are 3 wires, 1 goes to 5V, 1 goes to Ground, 1 goes to digital pin 2 which is the interrupt pin on the Nano. I <a href="https://forum.arduino.cc/index.php?topic=8548.0" target="_blank">read</a> it was suggested to put a 10k resistor, to act as a pull up, between pin 2 and 5V but I tested this with and without the resistor and didn't notice a difference. 
+ * Here is what mine looks like hooked up. Note, due to the size constraints of the breadboard, I routed the 5V connection to the other side of the breadboard, as seen by the second red wire. 
+ * <img src="./Pictures/waterOnly.jpg" alt="Water Wiring" width="300"/>
+* Electric
+  * I followed
 
 ### The Code
 * Python
@@ -83,4 +89,5 @@ Once all is printed, screw the bracket onto the base. Hollow out the hole on the
   * Electric
     * This code is meant if you're using two CT sensors. If you only plan to use 1 CT sensor, just remove the emon2 object and associates lines.
     * Like the water sensor code, this will read mA per second, sum it over 1 minute, and then output to the Serial port. 
-
+* Raspbian
+ * asljkfasdkj
