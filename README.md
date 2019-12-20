@@ -71,9 +71,9 @@ Once all is printed, screw the bracket onto the base. Hollow out the hole on the
   * <img src="./Pictures/waterOnly.jpg" alt="Water Wiring" width="300"/>
  * Electric
    * I followed the circuit built <a href="https://learn.openenergymonitor.org/electricity-monitoring/ct-sensors/how-to-build-an-arduino-energy-monitor-measuring-current-only" target="_blank">here</a> but adapted it to be used with 2 CT sensors instead of 1. This was how I **initially** it was wired up and tested with a breadboard. This set up used burden resistors and shared a 10uF capacitor:
-   * <img src="./Pictures/initialElectric.jpg" alt="Initial Electric Wiring" width="300"/>
+   * <img src="./Pictures/initialElectric.jpg" alt="Initial Electric Wiring" width="500"/>
    * I realized the CTs I had purchased, the ones linked above, had burden resistors built in. I therefore got rid of the burden resistors and added an extra 10uF capacitor that way each sensor got their own. Therefore, the final project had 2 voltage dividers, consisting of 4 10k resistors, and 2 10uF capacitors. In the picture below you can see how I soldered them together and added dupont connections. Note, one of the resistors is hidden under the shrink tubing.
-   * <img src="./Pictures/electricOnly.jpg" alt="Electric Wiring" width="300"/>
+   * <img src="./Pictures/electricOnly.jpg" alt="Electric Wiring" width="500"/>
 
 ### The Code
 * Python
