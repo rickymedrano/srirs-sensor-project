@@ -1,7 +1,11 @@
-# Overview
+
 <p align="center">
-  <img src="./Pictures/bunkhouse.jpg" alt="Title Picture1"> <img src="./Pictures/Foxtitle.jpg" alt="Title Picture2">
+  <img src="./Pictures/bunkhouse.jpg" alt="Title Picture1">
 </p>
+
+![](./Pictures/Foxtitle.jpg)
+
+# Overview
 This project was a combination Independent Study and Capstone project for undergrad Computer Science students at CSUCI. Not wanting to design another boring app, we decided to tackle a multidisciplinary problem. Santa Rosa Island, off the coast of Southern California, is home to CSUCI's research station. The climate on the island is charaterized by mild Winters and very dry Summers. Combined with severe drought during the past decade, resources on the island are very limited. This project serves a sustainability purpose by allowing research station staff monitor in real time the resource usage of the station. 
 
 The project uses a Raspberry Pi as the main computer to read in electric and water usage, then upload that data to an online database in the cloud. This data is now accessible on the mainland to be viewed graphically. Research station staff can now see how much and when resource usage happens and make sustainable decisions going forward. 
