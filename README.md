@@ -9,7 +9,7 @@
 # Overview
 This project was a combination Independent Study and Capstone project for undergrad Computer Science students at CSUCI. Not wanting to design another boring app, we decided to tackle a multidisciplinary problem. Santa Rosa Island, off the coast of Southern California, is home to CSUCI's research station. The climate on the island is charaterized by mild Winters and very dry Summers. Combined with severe drought during the past decade, resources on the island are very limited. This project serves a sustainability purpose by allowing research station staff monitor in real time the resource usage of the station. 
 
-The project uses a Raspberry Pi as the main computer to read in electric and water usage, then upload that data to an online database in the cloud. This data is now accessible on the mainland to be viewed graphically. Research station staff can now see how much and when resource usage happens and make sustainable decisions going forward. This project was then tidied up and placed into a 3D printed Island Fox, which is native to the island. 
+The project uses a Raspberry Pi as the main computer to read in electric and water usage, then uploads that data to an online database in the cloud. This data is now accessible on the mainland to be viewed graphically. Research station staff can now see how much and when resource usage happens and make sustainable decisions going forward. This project was then tidied up and placed into a 3D printed Island Fox, which is native to the island. 
 
 ### Authors
 Ricky Medrano and Geraldine Salazar-Harms
@@ -18,6 +18,18 @@ Ricky Medrano and Geraldine Salazar-Harms
   <img src="./Pictures/RandGCropped.jpg" alt="Title Picture">
 </p>
 
+### Experience Gained ###
+* Python
+* Arduino (C++)
+* Microcontrollers
+ * Arduino Uno
+ * Arduino Nano
+ * Analog to Digital Converter (ADC)
+ * Interrupts 
+ * Digital and Analog pin inputs and outputs
+ * Power requirements via 5V Logic
+* Electrical parameters - voltage, amperage, mains electricity
+* alskdj
 ### Program and Code Prerequisites
 - Python 3 with mysql connector library
 - Arduino IDE with EmonLib library
