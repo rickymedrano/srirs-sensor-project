@@ -23,11 +23,12 @@ Ricky Medrano and Geraldine Salazar-Harms
 - Arduino IDE with EmonLib library
 - Raspbian (any version with systemd, so Stretch or Buster)
 - MySQL database, either locally or in the cloud. We used a MySQL RDS on AWS with their free-tier option. 
-- If you want to graph the data you can use a website like Grafana and connect your database, or you can use Plotly.
+- If you want to graph the data you can use a website like Grafana and connect your database, or you can use Plotly's Chart-Studio.
 - VNC on Raspbian if you want to connect to your Pi remotely.
 
 ### Hardware Prerequisites
 You will need a 3D Printer if you want to print the model.
+You will need a soldering iron with solder and extra wire as well. 
 Here is a list of materials used in the project:
 
 | Item  | Quantity |
