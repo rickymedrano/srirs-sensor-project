@@ -132,7 +132,8 @@ Here is our plotted data, which shows resource usage each time a group went out 
 ### Authors
 Ricky Medrano and Geraldine Salazar-Harms
 
-<img src="./Pictures/RandGCropped.jpg" alt="R&G" width="400"><img src="./Pictures/RandG1.jpg" alt="R&G1" width="500">
+<img src="./Pictures/RandGCropped.jpg" alt="R&G" width="500">
+<img src="./Pictures/RandG2.jpg" alt="R&G1" width="500">
 
 ## Acknowledgments
  * Advisors
