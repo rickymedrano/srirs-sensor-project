@@ -11,12 +11,6 @@ This project was a combination Independent Study and Capstone project for underg
 
 The project uses a Raspberry Pi as the main computer to read in electric and water usage, then uploads that data to an online database in the cloud. This data is now accessible on the mainland to be viewed graphically. Research station staff can now see how much and when resource usage happens and make sustainable decisions going forward. This project was then tidied up and placed into a 3D printed Island Fox, which is native to the island. 
 
-### Authors
-Ricky Medrano and Geraldine Salazar-Harms
-
-
-<img src="./Pictures/RandGCropped.jpg" alt="R&G"><img src="./Pictures/RandG1.jpg" alt="R&G1">
-
 ### Experience Gained ###
 * Python
 * Arduino (C++)
@@ -136,7 +130,12 @@ Here is some plotted data, which shows resource usage each time a group went out
 * Do this same set up but over at the Lab on the island to measure its water and power usage.
 * Hook up more sensors such as temperature, humidity, CO2, etc.
 
- ## Acknowledgments
+### Authors
+Ricky Medrano and Geraldine Salazar-Harms
+
+<img src="./Pictures/RandGCropped.jpg" alt="R&G" width="400"><img src="./Pictures/RandG1.jpg" alt="R&G1" width="500">
+
+## Acknowledgments
  * Advisors
    * <a href="https://ciapps.csuci.edu/FacultyBiographies/gregory.wood">Dr. Gregory Wood</a> 
    * <a href="https://ciapps.csuci.edu/FacultyBiographies/brian.thoms">Dr. Brian Thoms</a> 
