@@ -1,9 +1,9 @@
 
 <p align="center">
-  <img src="./Pictures/bunkhouse.jpg" alt="Title Picture1">
+  <kbd><img src="./Pictures/bunkhouse.jpg" alt="Title Picture1"></kbd>
 </p>
 <p align="center">
-  <img src="./Pictures/Foxtitle.jpg" alt="Title Picture2" width="500"/>
+  <kbd><img src="./Pictures/Foxtitle.jpg" alt="Title Picture2" width="500"/></kbd>
 </p>
 
 # Overview
