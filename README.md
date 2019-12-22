@@ -118,7 +118,7 @@ Once all is printed, screw the bracket onto the base. Hollow out the hole on the
 * We spent much time tuning these services as they rely on many factors. If you find your service stops running, use ```journalctl``` to debug. A big issue for us was we were running the service files  with ```User=root``` but for some reason root couldnt access our mysql.connector library. Changing it to ```User=pi``` solved that issue. 
 
 ### Graph
-Here is some plotted data, which shows resource usage each time a group went out to the research station. On Grafana, the graph is interactable, where you can zoom in and see usage down to each minute. 
+Here is our plotted data, which shows resource usage each time a group went out to the research station. On Grafana, the graph is interactable, where you can zoom in and see usage down to each minute. 
   <p align="center">
     <img src="./Pictures/grafana.png" alt="Water Wiring" width="600"/>
   </p> 
@@ -147,3 +147,24 @@ Ricky Medrano and Geraldine Salazar-Harms
    * Joe Forrest
  * Judith Stapleman Foundation, Edison International, Matthew Hillman Fisher Foundation, Havasi Wilderness Foundation, and Keith Wescott for supporting transportation and lodging fees
  * Channel Islands National Park (CHIS NPS)
+## Extra Pictures
+Water
+<p align="center">
+    <img src="./Pictures/waterTiled.png" alt="Water Tiled"/>
+</p>
+  
+ Electricity
+ <p align="center">
+    <img src="./Pictures/electricTiled.png" alt="Water Tiled"/>
+</p>
+  
+ Fox
+ <p align="center">
+    <img src="./Pictures/foxTiled.png" alt="Water Tiled"/>
+ </p>
+ 
+Ricky and Joe at the Breaker Box
+ <p align="center">
+    <img src="./Pictures/RandJ.jpg" alt="Water Tiled"/>
+ </p>
+ 
