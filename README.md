@@ -117,7 +117,7 @@ Once all is printed, screw the bracket onto the base. Hollow out the hole on the
     * Like the water sensor code, this will read mA per second, sum it over 1 minute, and then output to the Serial port. 
 * Raspbian
   * For the purpose of this project, our scripts needed to be started automatically anytime the Raspberry Pi started up. There are a couple options available for gettings scripts to start automatically, like with a cron job. Since systemd was introduced with Raspbian Jessie, we decided to use it. This involves creating a .service file for each script, then using systemctl to manage those service files. Here is a picture of both our services, along with their locations, and where they point to in starting our Python scripts:
-  <p align="center">
+  * <p align="center">
     <img src="./Pictures/services.png" alt="Water Wiring" width="600"/>
   </p>
   * Use ```sudo systemctl start myservice.service``` to start the service, ```sudo systemctl stop myservice.service``` to stop it. Finally use ```sudo systemctl enable myservice.service``` so that it starts up on every reboot. ```sudo systemctl status myservice.service``` is also helpful in making sure things are running properly. 
