@@ -148,22 +148,24 @@ Ricky Medrano and Geraldine Salazar-Harms
  * Judith Stapleman Foundation, Edison International, Matthew Hillman Fisher Foundation, Havasi Wilderness Foundation, and Keith Wescott for supporting transportation and lodging fees
  * Channel Islands National Park (CHIS NPS)
 ## Extra Pictures
-Water
+Pictures tiled with MATLAB ```out = imtile({'1.jpg','2.jpg','3.jpg','4.jpg'}, 'GridSize',[2 2], 'BorderSize', 25); imshow(out);```
+
+**Water**
 <p align="center">
     <img src="./Pictures/waterTiled.png" alt="Water Tiled"/>
 </p>
   
- Electricity
+ **Electricity**
  <p align="center">
     <img src="./Pictures/electricTiled.png" alt="Water Tiled"/>
 </p>
   
- Fox
+ **Fox**
  <p align="center">
     <img src="./Pictures/foxTiled.png" alt="Water Tiled"/>
  </p>
  
-Ricky and Joe at the Breaker Box
+**Ricky and Joe at the Breaker Box**
  <p align="center">
     <img src="./Pictures/RandJ.jpg" alt="Water Tiled"/>
  </p>
