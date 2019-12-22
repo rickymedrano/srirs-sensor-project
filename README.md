@@ -119,7 +119,7 @@ Once all is printed, screw the bracket onto the base. Hollow out the hole on the
 ### Graph
 Here is our plotted data, which shows resource usage each time a group went out to the research station. On Grafana, the graph is interactable, where you can zoom in and see usage down to each minute. 
   <p align="center">
-    <img src="./Pictures/grafana.png" alt="Water Wiring" width="600"/>
+    <img src="./Pictures/grafana.png" alt="Water Wiring" width="600" style="border-radius:10%"/>
   </p> 
 
 ### Ideas to Build On
