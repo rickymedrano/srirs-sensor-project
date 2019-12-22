@@ -23,7 +23,7 @@ The project uses a Raspberry Pi as the main computer to read in electric and wat
 * Electrical parameters - voltage, amperage, mains electricity, sampling, voltage dividers, resistors, capacitors
 * Cloud computing: AWS
 * 3D Printing and modeling: Tinkercad
-* Database creation and connection
+* Database creation and connection, MySQL
 * Project Management: Trello
 * Raspbian (Linux)
   * systemd - services
