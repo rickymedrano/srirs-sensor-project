@@ -53,6 +53,8 @@ Here is a list of materials used in the project:
 | <a href="https://www.amazon.com/gp/product/B003WV5DME">6'' USB to Mini USB Cable</a>  | 2 |
 | <a href="https://www.amazon.com/gp/product/B01N1LBMPG">Split Core Transformer</a> | 2 |
 | <a href="https://www.amazon.com/gp/product/B00X5KHD66">YF-G1 Flowmeter</a> | 2 |
+| 10k Resistor | 4 |
+| 10uF Capacitor | 2 |
 
 ### Getting Started
 * I suggest you start here in order to understand how a CT sensor works and how the EmonLib library works https://learn.openenergymonitor.org/electricity-monitoring/ct-sensors/introduction
@@ -61,7 +63,7 @@ Here is a list of materials used in the project:
   * This project involves working with mains power and is therefore very dangerous. If you feel even slightly uncomfortable interacting with your breaker box, get the help of an Electrician to hook up the CT sensors. 
   * This project required two CT sensors since there were two main hot lines at the research station but most likely you'll only need 1 CT sensor if you're trying to implement this in a house.
 * Water
-  * Installin the flowmeter will probably require the help of a Plumber. It requires you shutting off the water main line and then installing the flowmeter inline which involves cutting pipe and testing for leaks. 
+  * Installing the flowmeter will probably require the help of a Plumber. It requires you shutting off the water main line and then installing the flowmeter inline which involves cutting pipe and testing for leaks. 
   * You're flowmeter will require a certain calibration factor to be set in the code. My calibration is most likely different than yours so you will need to test it yourself. For example, once your flowmeter is installed, you can turn on the facet and fill up a gallon jug then reference back to what the sensor is outputting, and make changes accordingly. 
 * Create a free-tier AWS account and create a MySQL database https://aws.amazon.com/rds/free/
 
