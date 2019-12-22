@@ -90,13 +90,10 @@ Once all is printed, screw the bracket onto the base. Hollow out the hole on the
 ### Hardware Setup
 * Water
   * Once you've installed your flowmeter, you'll need to hook it up to the Arduino Nano. There are 3 wires, 1 goes to 5V, 1 goes to Ground, 1 goes to digital pin 2 which is the interrupt pin on the Nano. We <a href="https://forum.arduino.cc/index.php?topic=8548.0" target="_blank">read</a> it was suggested to put a 10k resistor, to act as a pull up, between pin 2 and 5V but we tested this with and without the resistor and didn't notice a difference. 
-  * Here is what ours looks like hooked up. Note, due to the size constraints of the breadboard, we routed the 5V connection to the other side of the breadboard, as seen by the second red wire. 
-  <img src="./Pictures/waterOnly.jpg" alt="Water Wiring" width="300"/>
+  * Here is what ours looks like hooked up. Note, due to the size constraints of the breadboard, we routed the 5V connection to the other side of the breadboard, as seen by the second red wire.<img src="./Pictures/waterOnly.jpg" alt="Water Wiring" width="300"/>
  * Electric
-   * We followed the circuit built <a href="https://learn.openenergymonitor.org/electricity-monitoring/ct-sensors/how-to-build-an-arduino-energy-monitor-measuring-current-only" target="_blank">here</a> but adapted it to be used with 2 CT sensors instead of 1. This was how we **initially**  wired up and tested with a breadboard. This set up used burden resistors and shared a 10uF capacitor to act as a low-pass filter:
-   <img src="./Pictures/initialElectric.jpg" alt="Initial Electric Wiring" width="500"/>
-   * We realized the CTs we had purchased, the ones linked above, had burden resistors built in. We therefore got rid of the burden resistors and added an extra 10uF capacitor that way each sensor got their own. Therefore, the final project had 2 voltage dividers, consisting of 4 10k resistors, and 2 10uF capacitors. In the picture below you can see how we soldered them together and added dupont connections. Note, one of the resistors is hidden under the shrink tubing.
-   * <img src="./Pictures/electricOnly.jpg" alt="Electric Wiring" width="500"/>
+   * We followed the circuit built <a href="https://learn.openenergymonitor.org/electricity-monitoring/ct-sensors/how-to-build-an-arduino-energy-monitor-measuring-current-only" target="_blank">here</a> but adapted it to be used with 2 CT sensors instead of 1. This was how we **initially**  wired up and tested with a breadboard. This set up used burden resistors and shared a 10uF capacitor to act as a low-pass filter:<img src="./Pictures/initialElectric.jpg" alt="Initial Electric Wiring" width="500"/>
+   * We realized the CTs we had purchased, the ones linked above, had burden resistors built in. We therefore got rid of the burden resistors and added an extra 10uF capacitor that way each sensor got their own. Therefore, the final project had 2 voltage dividers, consisting of 4 10k resistors, and 2 10uF capacitors. In the picture below you can see how we soldered them together and added dupont connections. Note, one of the resistors is hidden under the shrink tubing.<img src="./Pictures/electricOnly.jpg" alt="Electric Wiring" width="500"/>
 
 ### The Code
 * Python
