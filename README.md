@@ -148,7 +148,11 @@ Ricky Medrano and Geraldine Salazar-Harms
  * Judith Stapleman Foundation, Edison International, Matthew Hillman Fisher Foundation, Havasi Wilderness Foundation, and Keith Wescott for supporting transportation and lodging fees
  * Channel Islands National Park (CHIS NPS)
 ## Extra Pictures
-Pictures tiled with MATLAB ```out = imtile({'1.jpg','2.jpg','3.jpg','4.jpg'}, 'GridSize',[2 2], 'BorderSize', 25); imshow(out);```
+Pictures tiled with MATLAB 
+```
+out = imtile({'1.jpg','2.jpg','3.jpg','4.jpg'}, 'GridSize',[2 2], 'BorderSize', 25);
+imshow(out);
+```
 
 **Water**
 <p align="center">
