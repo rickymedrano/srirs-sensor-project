@@ -42,7 +42,7 @@ Ricky Medrano and Geraldine Salazar-Harms
 ### Program and Code Prerequisites
 - Python 3 with mysql connector library
 - Arduino IDE with EmonLib library
-- Raspbian (any version with systemd, so Stretch or Buster)
+- Raspbian (we used Stretch, but Buster will work too)
 - MySQL database, either locally or in the cloud. We used a MySQL RDS on AWS with their free-tier option. 
 - If you want to graph the data you can use a website like Grafana and connect your database, or you can use Plotly's Chart-Studio.
 - VNC on Raspbian if you want to connect to your Pi remotely.
@@ -116,16 +116,20 @@ Once all is printed, screw the bracket onto the base. Hollow out the hole on the
     * This code is meant if you're using two CT sensors. If you only plan to use 1 CT sensor, just remove the emon2 object and associates lines.
     * Like the water sensor code, this will read mA per second, sum it over 1 minute, and then output to the Serial port. 
 * Raspbian
- * asljkfasdkj
+ * For the purpose of this project, our scripts needed to be started automatically anytime the Raspberry Pi started up. There are a couple options available for gettings scripts to start automatically, like with a cron job. Since systemd was introduced with Raspbian Jessie, we decided to use it. This involves creating a .service file for each script, then using systemctl to manage those service files. Here is a picture of both our services, along with their locations, and where they point to in starting our Python scripts:
+ <img src="./Pictures/services.png" alt="Water Wiring" width="600"/>
+ * Use ```sudo systemctl start myservice.service``` to start the service, ```sudo systemctl stop myservice.service``` to stop it. Finally use ```sudo systemctl enable myservice.service``` so that it starts up on every reboot. ```sudo systemctl status myservice.service``` is also helpful in making sure things are running properly. 
+ * We spent much time tuning these services as they rely on many factors. If you find your service stops running, use ```journalctl``` to debug. A big issue for us was we were running the service files  with ```User=root``` but for some reason root couldnt access our mysql.connector library. Changing it to ```User=pi``` solved that issue. 
  
  ## Acknowledgments
  * Advisors
    * <a href="https://ciapps.csuci.edu/FacultyBiographies/gregory.wood">Dr. Gregory Wood</a> 
    * <a href="https://ciapps.csuci.edu/FacultyBiographies/brian.thoms">Dr. Brian Thoms</a> 
    * <a href="https://ciapps.csuci.edu/FacultyBiographies/michael.soltys">Dr. Michael Soltys</a>
- * <a href="https://www.csuci.edu/sri/">Santa Rosa Island Research Station</a>
+ * Santa Rosa Island Research Station
    * Russ Bradley
    * Aspen Coty
    * Robyn Shea
+   * Joe Forrest
  * Judith Stapleman Foundation, Edison International, Matthew Hillman Fisher Foundation, Havasi Wilderness Foundation, and Keith Wescott for supporting transportation and lodging fees
  * Channel Islands National Park (CHIS NPS)
