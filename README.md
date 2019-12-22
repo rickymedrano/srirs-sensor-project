@@ -7,16 +7,15 @@
 </p>
 
 # Overview
-This project was a combination Independent Study and Capstone project for undergrad Computer Science students at CSUCI. Not wanting to design another boring app, we decided to tackle a multidisciplinary problem. Santa Rosa Island, off the coast of Southern California, is home to CSUCI's research station. The climate on the island is charaterized by mild Winters and very dry Summers. Combined with severe drought during the past decade, resources on the island are very limited. This project serves a sustainability purpose by allowing research station staff monitor in real time the resource usage of the station. 
+This project was a combination Independent Study and Capstone project for undergrad Computer Science students at CSUCI. Not wanting to design another boring app, we decided to tackle a multidisciplinary problem. Santa Rosa Island, off the coast of Southern California, is home to CSUCI's research station. The climate on the island is charaterized by mild Winters and very dry Summers. Combined with severe drought during the past decade, resources on the island are very limited. This project serves a sustainability purpose by allowing research station staff monitor in real time the resource usage of the station. It is a continuation of a project that was initially started in Dr. Wood's UNIV 492 Sustainability in Campus Infrastructure course. 
 
 The project uses a Raspberry Pi as the main computer to read in electric and water usage, then uploads that data to an online database in the cloud. This data is now accessible on the mainland to be viewed graphically. Research station staff can now see how much and when resource usage happens and make sustainable decisions going forward. This project was then tidied up and placed into a 3D printed Island Fox, which is native to the island. 
 
 ### Authors
 Ricky Medrano and Geraldine Salazar-Harms
 
-<p align="center">
-  <img src="./Pictures/RandGCropped.jpg" alt="Title Picture">
-</p>
+
+<img src="./Pictures/RandGCropped.jpg" alt="R&G"><img src="./Pictures/RandG1.jpg" alt="R&G1">
 
 ### Experience Gained ###
 * Python
@@ -36,7 +35,7 @@ Ricky Medrano and Geraldine Salazar-Harms
 * Raspbian (Linux)
   * systemd - services
   * Navigating the terminal and using bash commands
-* Soldering
+* Soldering and crimping dupont connections
 * Plot.ly, Grafana, Chart-Studio, WordPress
 
 ### Program and Code Prerequisites
@@ -123,7 +122,20 @@ Once all is printed, screw the bracket onto the base. Hollow out the hole on the
   
 * Use ```sudo systemctl start myservice.service``` to start the service, ```sudo systemctl stop myservice.service``` to stop it. Finally use ```sudo systemctl enable myservice.service``` so that it starts up on every reboot. ```sudo systemctl status myservice.service``` is also helpful in making sure things are running properly.  
 * We spent much time tuning these services as they rely on many factors. If you find your service stops running, use ```journalctl``` to debug. A big issue for us was we were running the service files  with ```User=root``` but for some reason root couldnt access our mysql.connector library. Changing it to ```User=pi``` solved that issue. 
- 
+
+### Graph
+Here is some plotted data, which shows resource usage each time a group went out to the research station. On Grafana, the graph is interactable, where you can zoom in and see usage down to each minute. 
+  <p align="center">
+    <img src="./Pictures/grafana.png" alt="Water Wiring" width="600"/>
+  </p> 
+
+### Ideas to Build On
+* Use a Rasbperry Pi Zero W, hooked up to a Magic Mirror or monitor, that displays energy usage in real time. Place on wall in the research station so visitors can see how much electricty and water they are using.
+* Use an Arduino Nano with wifi option to send electric data wireless from the back of the breaker box, instead of having to run a line from the breaker box to to Nano. Same goes for water sensor.
+* Write an algorithm that detects anomalies in the data such as leaks or visitors abusing the resources. Use AWS Lambda for this to trigger an email to be sent to appropriate personnel.
+* Do this same set up but over at the Lab on the island to measure its water and power usage.
+* Hook up more sensors such as temperature, humidity, CO2, etc.
+
  ## Acknowledgments
  * Advisors
    * <a href="https://ciapps.csuci.edu/FacultyBiographies/gregory.wood">Dr. Gregory Wood</a> 
