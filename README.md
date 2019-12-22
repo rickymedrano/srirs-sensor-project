@@ -15,8 +15,7 @@ The project uses a Raspberry Pi as the main computer to read in electric and wat
 * Python
 * Arduino (C++)
 * Microcontrollers
-  * Arduino Uno
-  * Arduino Nano
+  * Arduino Uno & Nano
   * Analog to Digital Converter (ADC)
   * Interrupts 
   * Digital and Analog pin inputs and outputs
@@ -66,19 +65,8 @@ Here is a list of materials used in the project:
   * This project required two CT sensors since there were two main hot lines at the research station but most likely you'll only need 1 CT sensor if you're trying to implement this in a house.
 * Water
   * Installing the flowmeter will probably require the help of a Plumber. It requires you shutting off the water main line and then installing the flowmeter inline which involves cutting pipe and testing for leaks. 
-  * You're flowmeter will require a certain calibration factor to be set in the code. My calibration is most likely different than yours so you will need to test it yourself. For example, once your flowmeter is installed, you can turn on the facet and fill up a gallon jug then reference back to what the sensor is outputting, and make changes accordingly. 
+  * Your flowmeter will require a certain calibration factor to be set in the code. My calibration is most likely different than yours so you will need to test it yourself. For example, once your flowmeter is installed, you can turn on the facet and fill up a gallon jug then reference back to what the sensor is outputting, and make changes accordingly. 
 * Create a free-tier AWS account and create a MySQL database https://aws.amazon.com/rds/free/
-
-### 3D Printing
-I've included all the .stl files if you want to print the fox. 
-* The body requires supports and should be printed no more than 0.15mm per layer. There is some artifacting where the top of the tail meets the body in the front of the model. 
-* Post processing is needed on the body model where you have to cut out the hole near the tail to feed the wires through
-* The head should be printed around 15%, anymore will make it top heavy
-* The bracket should be printed around 15% so it's easy to put a screw through
-* The base should be printed around 15% for the same reason as the bracket
-* All the models were printed on a Prusa MK3S. I have no settings recommendations on other types of printers.
-
-Once all is printed, screw the bracket onto the base. Hollow out the hole on the body where the power and sensor wires come in. Use super glue to attach the head to the body. 
 
 ### Hardware Setup
 * Water
@@ -116,6 +104,17 @@ Once all is printed, screw the bracket onto the base. Hollow out the hole on the
   
 * Use ```sudo systemctl start myservice.service``` to start the service, ```sudo systemctl stop myservice.service``` to stop it. Finally use ```sudo systemctl enable myservice.service``` so that it starts up on every reboot. ```sudo systemctl status myservice.service``` is also helpful in making sure things are running properly.  
 * We spent much time tuning these services as they rely on many factors. If you find your service stops running, use ```journalctl``` to debug. A big issue for us was we were running the service files  with ```User=root``` but for some reason root couldnt access our mysql.connector library. Changing it to ```User=pi``` solved that issue. 
+
+### 3D Printing
+I've included all the .stl files if you want to print the fox. 
+* The body requires supports and should be printed no more than 0.15mm per layer. There is some artifacting where the top of the tail meets the body in the front of the model. 
+* Post processing is needed on the body model where you have to cut out the hole near the tail to feed the wires through
+* The head should be printed around 15%, anymore will make it top heavy
+* The bracket should be printed around 15% so it's easy to put a screw through
+* The base should be printed around 15% for the same reason as the bracket
+* All the models were printed on a Prusa MK3S. I have no settings recommendations on other types of printers.
+
+Once all is printed, screw the bracket onto the base. Hollow out the hole on the body where the power and sensor wires come in. Use super glue to attach the head to the body. 
 
 ### Graph
 Here is our plotted data, which shows resource usage each time a group went out to the research station. On Grafana, the graph is interactable, where you can zoom in and see usage down to each minute. 
