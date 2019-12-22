@@ -22,14 +22,23 @@ Ricky Medrano and Geraldine Salazar-Harms
 * Python
 * Arduino (C++)
 * Microcontrollers
- * Arduino Uno
- * Arduino Nano
- * Analog to Digital Converter (ADC)
- * Interrupts 
- * Digital and Analog pin inputs and outputs
- * Power requirements via 5V Logic
-* Electrical parameters - voltage, amperage, mains electricity
-* alskdj
+  * Arduino Uno
+  * Arduino Nano
+  * Analog to Digital Converter (ADC)
+  * Interrupts 
+  * Digital and Analog pin inputs and outputs
+  * Power requirements via 5V Logic
+* Electrical parameters - voltage, amperage, mains electricity, sampling, voltage dividers, resistors, capacitors
+* Cloud computing: AWS
+* 3D Printing and modeling: Tinkercad
+* Database creation and connection
+* Project Management: Trello
+* Raspbian (Linux)
+  * systemd - services
+  * Navigating the terminal and using bash commands
+* Soldering
+* Plot.ly, Grafana, Chart-Studio, WordPress
+
 ### Program and Code Prerequisites
 - Python 3 with mysql connector library
 - Arduino IDE with EmonLib library
@@ -84,7 +93,7 @@ Once all is printed, screw the bracket onto the base. Hollow out the hole on the
   * Here is what ours looks like hooked up. Note, due to the size constraints of the breadboard, we routed the 5V connection to the other side of the breadboard, as seen by the second red wire. 
   * <img src="./Pictures/waterOnly.jpg" alt="Water Wiring" width="300"/>
  * Electric
-   * We followed the circuit built <a href="https://learn.openenergymonitor.org/electricity-monitoring/ct-sensors/how-to-build-an-arduino-energy-monitor-measuring-current-only" target="_blank">here</a> but adapted it to be used with 2 CT sensors instead of 1. This was how we **initially**  wired up and tested with a breadboard. This set up used burden resistors and shared a 10uF capacitor:
+   * We followed the circuit built <a href="https://learn.openenergymonitor.org/electricity-monitoring/ct-sensors/how-to-build-an-arduino-energy-monitor-measuring-current-only" target="_blank">here</a> but adapted it to be used with 2 CT sensors instead of 1. This was how we **initially**  wired up and tested with a breadboard. This set up used burden resistors and shared a 10uF capacitor to act as a low-pass filter:
    * <img src="./Pictures/initialElectric.jpg" alt="Initial Electric Wiring" width="500"/>
    * We realized the CTs we had purchased, the ones linked above, had burden resistors built in. We therefore got rid of the burden resistors and added an extra 10uF capacitor that way each sensor got their own. Therefore, the final project had 2 voltage dividers, consisting of 4 10k resistors, and 2 10uF capacitors. In the picture below you can see how we soldered them together and added dupont connections. Note, one of the resistors is hidden under the shrink tubing.
    * <img src="./Pictures/electricOnly.jpg" alt="Electric Wiring" width="500"/>
@@ -95,16 +104,28 @@ Once all is printed, screw the bracket onto the base. Hollow out the hole on the
   * Replace the endpoint address, username, and password with your own from the AWS RDS. 
   * It's better practice to save your credentails into environment variables instead of hard coding them in like we did. It worked for us as it was only a school project and the database has been moved already.
   * The reason the script starts with 
-  ``` time.sleep(300) ``` is so the router had enough time to connect to the internet everytime the power came back on in the bunkhouse. If no internet connection was available, the script would exit when attempting to connect to the database. 
+  ``` time.sleep(300) ``` is so the router had enough time to connect to the internet everytime the power came back on in the research station. If no internet connection was available, the script would exit when attempting to connect to the database. 
   * The line with ```serial.Serial('/dev/ttyUSB0',9600,timeout=1)``` will need to be modified depending how Raspbian reads in your Arduino Nano on the USB port. Somtimes it will be ACM0USB instead of ttyUSB0 or something entirely different. You can try in the terminal ```dmesg``` or ```dmesg | grep "tty"``` to verify.
 * Arduino (C++)
   * Water
     * For water readings, use "yfg1Working.ino". 
     * The code is set up to take readings in mL every second, sum this over 1 minute, before outputting to the serial port, where it is ready by "waterRosa.py". 
-    * Manipulate the code based on your temporal needs. I left commented print statements to assist. In your final iteration make sure you only have one print statement in the code as the Python script is only parsing 1 value over the serial line.
+    * Manipulate the code based on your temporal needs. I left commented print statements to assist. In your final iteration make sure you only have one print statement in the code as the Python script is only parsing 1 value over the serial port.
     * Don't use ```Serial.println()``` as it puts a new line character at the end of the output. Instead stick with ```Serial.print()``` unless you want to handle the new line character on the Python script side.
   * Electric
     * This code is meant if you're using two CT sensors. If you only plan to use 1 CT sensor, just remove the emon2 object and associates lines.
     * Like the water sensor code, this will read mA per second, sum it over 1 minute, and then output to the Serial port. 
 * Raspbian
  * asljkfasdkj
+ 
+ ## Acknowledgments
+ * Advisors
+   * <a href="https://ciapps.csuci.edu/FacultyBiographies/gregory.wood">Dr. Gregory Wood</a> 
+   * <a href="https://ciapps.csuci.edu/FacultyBiographies/brian.thoms">Dr. Brian Thoms</a> 
+   * <a href="https://ciapps.csuci.edu/FacultyBiographies/michael.soltys">Dr. Michael Soltys</a>
+ * <a href="https://www.csuci.edu/sri/">Santa Rosa Island Research Station</a>
+   * Russ Bradley
+   * Aspen Coty
+   * Robyn Shea
+ * Judith Stapleman Foundation, Edison International, Matthew Hillman Fisher Foundation, Havasi Wilderness Foundation, and Keith Wescott for supporting transportation and lodging fees
+ * Channel Islands National Park (CHIS NPS)
